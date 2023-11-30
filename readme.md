@@ -29,7 +29,55 @@ These percentages provide insights into the class distribution in the "degradabl
 * SpMax_B(m)
 * SpMax_L
 
+<img src="image.png" alt="Alt text" width="200"/>
+<img src="image-4.png" alt="Alt text" width="200"/>
+<img src="image-3.png" alt="Alt text" width="200"/>
+<img src="image-1.png" alt="Alt text" width="200"/>
+<img src="image-2.png" alt="Alt text" width="200"/>
+
 ## Modeling
+For modeling we tested three different models based on train_test_split : random, logistic regression and KNN. For each model we display the normalized confusion matrix obtained using y_test and y_pred. To explain the results of the above model classification, we wanted to analyze the performance metrics of each model. Here are the key metrics:
+
+1. Accuracy: It measures the overall correctness of the model's predictions. It is calculated as the ratio of correctly classified instances to the total number of instances.
+2. Precision: It measures the proportion of true positive predictions out of all positive predictions. It indicates how well the model identifies the positive class.
+3. Recall: It measures the proportion of true positive predictions out of all actual positive instances. It indicates how well the model captures the positive class.
+4. F1 Score: It is the harmonic mean of precision and recall. It provides a balanced measure of the model's performance by considering both precision and recall.
+
+By analyzing these metrics for each model, we can assess their effectiveness in classifying the target variable. The model with higher accuracy, precision, recall, and F1 score is considered better in terms of classification performance.
+
+  <p style="color: #FF9F35">We can see that the best model tested for this classification problem is the Logistic regression model.
+
+  Finally we have chosen the logistic regression model is chosen, since it provides the overall best performance.
+
+<img src="image-5.png" alt="Alt text" width="500"/>         
+  <img src="image-6.png" alt="Alt text" width="400"/>
+
+The overall model performance provides a good classification of the target degradability. The most import metric being the accuracy score. The obtained accuracy score states that using this model 85% of all compounds to be classified as degradable are truly degradable.
+
+The logistic regression model's nature allows for a more in-depth exploration of the relationship between the utilized features and the classification:
+
+  <img src="image-7.png" alt="Alt text" width="400"/>
+
+## Application
+The OECD offers ample data on chemical compounds that can be readily scraped for future analysis. This presents an opportunity to enhance model performance.
+
+On an industrial scale, this model could be applied to:
+
+* Innovate Biodegradable Compounds:
+Utilize the feature importance insights to create novel biodegradable compounds, leveraging the identified influential features.
+
+* Laboratory Testing for Waste:
+Conduct laboratory tests on waste materials to ascertain their compostability, providing a practical application for the model in waste management.
+
+* Certification of Biodegradable Products:
+Certify products as biodegradable based on compound data, offering a valuable contribution to environmentally conscious product labeling and certification efforts.
+
+
+
+
+
+
+
 
 
 
