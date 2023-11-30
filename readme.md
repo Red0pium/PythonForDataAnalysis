@@ -15,6 +15,23 @@ Classification and prediction of biodegradable or non-biodegradable compounds us
  
  The Dataset can be found here : https://archive.ics.uci.edu/dataset/254/qsar+biodegradation
 ## Data pre-processing
+we started by naming each column because they did not have a description in the dataset then by looking at the types of values ​​contained in the dataset we realized that there is only one object column which is actually the experimental class column. This is our target. We have also noticed that there is no missing value in the dataset. In order to facilitate classification through our different models we have also ensured that the target class will be expressed as integers. So NRB which means Not Biodegradable is represented by a 0 and RB (Biodegradable) is represented by a 1. Finally we normalized the dataset.
+
+## Data visualization
+We wanted to know the exact value for the ditribution of the target classes is. We obtained :
+* For 0 => NRB (non-degradable) constitutes approximately 66.26% of the entries
+* For 1 => RB (degradable) constitutes approximately 33.74% of the entries
+
+These percentages provide insights into the class distribution in the "degradable" column of the dataset. In this case, it suggests that the dataset is somewhat imbalanced, with the non-degradable class being more prevalent than the degradable class. Understanding class distribution is important, as imbalances can impact the performance of machine learning models. In this case, the imbalance is quite small, so we decide to keep it. For this part, the dataset was partitioned into two target classes: "degradable" and "non-degradable," aiming to identify features exhibiting notable distinctions between these two groups. Then we dropped from the dataset the columns : "SM6_L","SpMax_A","SM6_B(m)“ because of the highly correlations between variables (|r| > 0.90). Once the figures are displayed, the distribution show that the best prediciting features for class seperation are:
+* SpPosA_B(p)
+* HyWi_B(m)
+* C%
+* SpMax_B(m)
+* SpMax_L
+
+## Modeling
+
+
 
 
  
